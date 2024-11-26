@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <!-- Hero Section -->
+    
     <header class="hero">
-      <h1>{{ titulo }}</h1>
+      <h1 v-html="titulo"></h1>
       <p>{{ subtitulo }}</p>
-      <button @click="scrollToContent">Saber más</button>
+      <button class="btn btn-lg btn-primary shadow-lg rounded-pill text-white" @click="scrollToContent">
+  Descubre cómo
+</button>
     </header>
 
     <!-- Navigation Menu -->
@@ -13,8 +15,8 @@
     <main>
       <!-- Sobre Nosotros Section -->
       <section id="contenido" class="content-section">
-        <h2>Sobre nosotros</h2>
-        <p>Este es el espacio donde puedes describir tu producto o servicio.</p>
+        <h2 class="aboutUs">Sobre nosotros</h2>
+        <p class="Description">En WMSLabs, somos un equipo apasionado por la tecnología y la innovación. Nos especializamos en el desarrollo de soluciones de software diseñadas para impulsar el crecimiento de empresas de todos los tamaños. Nuestra misión es crear productos digitales rentables y escalables que no solo resuelvan problemas, sino que generen un impacto positivo a largo plazo.</p>
       </section>
 
       <!-- Gallery Section -->
@@ -43,8 +45,8 @@ export default {
   },
   data() {
     return {
-      titulo: 'Somos WMS Labs',
-      subtitulo: 'Descubre nuestro increíble producto',
+      titulo: 'Transforma tu negocio <br /> con software innovador',
+      subtitulo: 'Creamos soluciones escalables que impulsan el crecimiento rentable',
     };
   },
   methods: {
@@ -57,8 +59,42 @@ export default {
 </script>
 
 <style>
+
+  .hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 3rem; 
+  text-align: center;
+  margin-bottom: 20px;
+}  
+.aboutUs {
+  font-family: 'Poppins', sans-serif;
+}
+.Description{
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+}
+
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.hero .btn-custom {
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Degradado de azul */
+  color: white;
+  border: none;
+}
+
+.hero .btn-custom:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb); /* Cambio de colores al pasar el ratón */
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Global Styles */
 body {
+  font-family: 'Poppins', sans-serif;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -71,22 +107,9 @@ body {
   color: white;
   text-align: center;
   padding: 50px 20px;
+  margin-top: 60px;
 }
 
-.hero button {
-  background-color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  color: #2575fc;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.hero button:hover {
-  background-color: #e0e0e0;
-}
 
 /* Content Section */
 .content-section {
