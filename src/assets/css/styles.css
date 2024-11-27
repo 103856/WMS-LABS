@@ -1,6 +1,34 @@
-/* styles.css */
+:root {
+    /* Colores Primarios */
+    --color-green-black: rgb(2, 26, 26);
+    /* #021A1A */
+    --color-dark-green: rgb(4, 34, 34);
+    /* #042222 */
+    --color-green: rgb(3, 98, 76);
+    /* #03624C */
+    --color-mint-green: rgb(44, 194, 149);
+    /* #2CC295 */
+    --color-lime-green: rgb(0, 223, 130);
+    /* #00DF82 */
+    --color-flash-white: rgb(241, 247, 247);
+    /* #F1F7F7 */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    /* Colores Secundarios */
+    --color-pine-green: rgb(6, 48, 44);
+    /* #06302C */
+    --color-basil-green: rgb(11, 69, 57);
+    /* #0B4539 */
+    --color-forest-green: rgb(8, 85, 67);
+    /* #085543 */
+    --color-frog-green: rgb(23, 135, 110);
+    /* #17876E */
+    --color-secondary-mint-green: rgb(46, 169, 140);
+    /* #2EA98C */
+    --color-stone-gray: rgb(111, 125, 125);
+    /* #6F7D7D */
+    --color-pistachio-gray: rgb(170, 203, 196);
+    /* #AACBC4 */
+}
 
 
 body {
@@ -9,114 +37,161 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
- 
-  .hero {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-color: var(--color-flash-white);
+}
+
+/* Estilo Global para Botones */
+button {
+    background-color: var(--color-lime-green);
+    color: var(--color-flash-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2,
+h5,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #aaa;
+}
+
+/* Flexbox para centrar contenidos */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Estilos para la sección hero */
+.hero {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para apilar los elementos */
+    justify-content: flex-start; /* Asegurarnos que los elementos estén alineados al principio */
+    align-items: center; /* Centrar los elementos */
+    padding: 20px;
+    background-color: var(--color-green-black);
+    background-image: linear-gradient(43deg, var(--color-green-black) 0%, var(--color-dark-green) 46%, var(--color-green) 100%);
+
     color: white;
+    position: relative;
+    height: 100vh; /* Mantener la altura del viewport para la sección hero */
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 50px;
+    max-width: 60%; /* Reducir el tamaño del contenido para que se vea más centrado */
     text-align: center;
-    padding: 50px 20px;
-    margin-top: 60px;
-  }
-  
-  .hero h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 3rem;
+    z-index: 2;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hero-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de la galería */
+.mini-gallery-container {
+    padding: 40px 0;
+    width: 100%;
+    background-color: #f1f7f7;
+}
+
+.mini-gallery-container h2 {
+    font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .hero .btn-custom {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-  }
-  
-  .hero .btn-custom:hover {
-    background: linear-gradient(45deg, #2575fc, #6a11cb);
-    color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+}
 
-  .content-section {
-    padding: 40px 20px;
+/* Estilo para el gallery de iconos */
+.icon-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scrollbar-width: none;
+    /* Ocultar scrollbar en Firefox */
+}
+
+.icon-slider::-webkit-scrollbar {
+    display: none;
+    /* Ocultar scrollbar en Chrome, Safari y Edge */
+}
+
+.icon-container {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
     text-align: center;
-  }
-  
-  .aboutUs {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .Description {
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-  }
-  
+}
 
-  .footer {
+.icon-container i {
+    font-size: 48px;
+    color: #007bff;
+}
+
+.icon-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilo del footer */
+.footer
     background: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
-  }
-  
+}
 
-  .nav {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav ul li a:hover {
-    color: #aaa;
-  }
-  
- 
-  .gallery-section {
+.gallery-section {
     padding: 40px 20px;
     text-align: center;
-  }
-  
-  .gallery-grid {
+}
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 20px;
-  }
-  
-  .gallery-item img {
+}
+
+.gallery-item img {
     width: 100%;
     border-radius: 8px;
     transition: transform 0.3s ease;
-  }
-  
-  .gallery-item img:hover {
+}
+
+.gallery-item img:hover {
     transform: scale(1.05);
   }
   
