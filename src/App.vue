@@ -11,6 +11,7 @@
 
  
     <main>
+      <router-view></router-view>
       <section id="contenido" class="content-section styled-section">
         <h2 class="aboutUs">Sobre nosotros</h2>
         <p class="Description">
@@ -18,7 +19,7 @@
         </p>
       </section>
 
-    
+    </main>
      
   
 
