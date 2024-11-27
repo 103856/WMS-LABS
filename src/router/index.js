@@ -1,22 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';  
-import HomeView from '../pages/HomeView.vue';  // Importa HomeView correctamente
-import Producto from '../pages/Producto.vue'; 
-import Contacto from '../pages/Contacto.vue'; 
+import HomeView from '../pages/HomePage.vue';  // Importa HomeView correctamente
+import Producto from '../pages/ProductPage.vue'; 
+import Contacto from '../pages/ContactPage.vue'; 
 
 const routes = [
   {
     path: '/',  // Ruta principal
-    name: 'Home',
+    name: 'HomePage',
     component: HomeView, 
   },
   {
-    path: '/producto',  
-    name: 'Producto',
+    path: '/productPage',  
+    name: 'ProductPage',
     component: Producto,  
   },
   {
-    path: '/contacto',  
-    name: 'Contacto',
+    path: '/contactPage',  
+    name: 'ContactPage',
     component: Contacto,
   }
 ];

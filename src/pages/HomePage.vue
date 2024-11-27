@@ -13,7 +13,7 @@
   import DefaultLayout from '@/layouts/DefaultLayout.vue';  // Verifica la ruta de importación
   
   export default {
-    name: 'HomeView',
+    name: 'HomePage',
     components: {
       DefaultLayout,  // Asegúrate de registrar el componente
     },

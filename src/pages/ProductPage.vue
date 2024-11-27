@@ -76,7 +76,7 @@
 
 <script>
 export default {
-  name: "Producto",
+  name: "ProductPage",
   data() {
     return {
       cards: [
