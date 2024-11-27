@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#hero">Inicio</a>
+            <router-link class="nav-link" to="/App">Inicio</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contenido">Sobre Nosotros</a>
