@@ -10,16 +10,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link class="nav-link" to="/App">Inicio</router-link>
+            <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contenido">Sobre Nosotros</a>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/Producto">Producto</router-link>
+            <router-link class="nav-link" to="/ProductPage">Producto</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer">Contacto</a>
+            <router-link class="nav-link" to="/ContactPage">Sobre Nosotros</router-link>
           </li>
         </ul>
       </div>
