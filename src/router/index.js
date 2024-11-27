@@ -1,24 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router';  
-import Header from '../components/Header.vue'; 
-import Producto from '../components/Producto.vue'; 
-import Contacto from '../components/Contacto.vue'; 
+import HomeView from '../pages/HomeView.vue';  // Importa HomeView correctamente
+import Producto from '../pages/Producto.vue'; 
+import Contacto from '../pages/Contacto.vue'; 
 
 const routes = [
   {
-    path: '/',
+    path: '/',  // Ruta principal
     name: 'Home',
-    component: Header, 
+    component: HomeView, 
   },
   {
-    path: '/Producto',  
+    path: '/producto',  
     name: 'Producto',
-    component: Producto,
+    component: Producto,  
   },
   {
-    path: '/Contacto',  
+    path: '/contacto',  
     name: 'Contacto',
     component: Contacto,
-  },
+  }
 ];
 
 const router = createRouter({
