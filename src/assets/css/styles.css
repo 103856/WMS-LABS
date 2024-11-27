@@ -1,14 +1,17 @@
 /* styles.css */
 
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 body {
-    font-family: 'Poppins', sans-serif;
+  
+  font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Hero Section */
+ 
   .hero {
     background: linear-gradient(45deg, #6a11cb, #2575fc);
     color: white;
@@ -41,7 +44,7 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Content Section */
+
   .content-section {
     padding: 40px 20px;
     text-align: center;
@@ -56,7 +59,7 @@ body {
     font-size: 25px;
   }
   
-  /* Footer Section */
+
   .footer {
     background: #333;
     color: white;
@@ -64,7 +67,7 @@ body {
     padding: 20px 0;
   }
   
-  /* Navigation Styles */
+
   .nav {
     background-color: #333;
     color: white;
@@ -94,7 +97,7 @@ body {
     color: #aaa;
   }
   
-  /* Gallery Styles */
+ 
   .gallery-section {
     padding: 40px 20px;
     text-align: center;
@@ -117,7 +120,6 @@ body {
     transform: scale(1.05);
   }
   
-  /* Modal Styles */
   .modal {
     position: fixed;
     top: 0;

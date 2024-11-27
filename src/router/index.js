@@ -1,6 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router';  // Importación correcta de vue-router
+import { createRouter, createWebHistory } from 'vue-router';  
 import Header from '../components/Header.vue'; 
 import Producto from '../components/Producto.vue'; 
+import Contacto from '../components/Contacto.vue'; 
 
 const routes = [
   {
@@ -9,9 +10,14 @@ const routes = [
     component: Header, 
   },
   {
-    path: '/Producto',  // Ruta para el componente Producto
+    path: '/Producto',  
     name: 'Producto',
     component: Producto,
+  },
+  {
+    path: '/Contacto',  
+    name: 'Contacto',
+    component: Contacto,
   },
 ];
 
