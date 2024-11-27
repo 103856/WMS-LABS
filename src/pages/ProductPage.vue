@@ -1,13 +1,13 @@
 <template>
+  
   <div class="container my-5">
-    <!-- Título para las 6 cartas -->
+ 
     <div class="row mb-4">
       <div class="col-12">
         <h2 class="section-title">Producto:</h2>
       </div>
     </div>
 
-    <!-- Sección de cartas horizontales -->
     <div class="row">
       <div class="col-md-4 mb-4" v-for="(card, index) in cards" :key="index">
         <div class="card shadow-sm border-dark rounded-3 d-flex flex-row">
@@ -18,11 +18,11 @@
             <h5 class="card-title fs-4">{{ card.title }}</h5>
             <p class="card-text fs-6">{{ card.text }}</p>
           </div>
+
         </div>
       </div>
     </div>
 
-    <!-- Nueva Imagen con texto sobrepuesto (Entre Producto y Planes) -->
     <div class="image-with-text mb-4">
       <img
         src="https://st3.depositphotos.com/1000423/16469/i/450/depositphotos_164690778-stock-photo-businessman-draw-diagrams-mixed-media.jpg"
@@ -34,14 +34,12 @@
       </div>
     </div>
 
-    <!-- Título para las cartas de planes -->
     <div class="row mt-5 mb-4">
       <div class="col-12">
         <h2 class="section-title">Planes:</h2>
       </div>
     </div>
 
-    <!-- Sección de cartas verticales -->
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="card card-vertical shadow-sm border-dark rounded-3">
@@ -124,16 +122,15 @@ export default {
 <style scoped>
 
 
-/* Estilo para las cartas */
 .card {
   background-color: #f7f7f7;
   border: 2px solid black;
-  height: 210px; /* Altura uniforme para todas las cartas horizontales */
+  height: 210px; 
   display: flex;
-  flex-direction: column; /* Mantiene el contenido interno tal como está */
+  flex-direction: column; 
 }
 .card {
-  flex: 1; /* Asegura que las cartas ocupen toda la altura de su contenedor */
+  flex: 1;
 }
 
 .card-img-container {
@@ -153,7 +150,7 @@ export default {
   justify-content: center;
 }
 
-/* Cartas horizontales */
+
 .card-title {
   font-size: 1rem;
   font-weight: bold;
@@ -167,17 +164,17 @@ export default {
 }
 
 .card-vertical {
-  height: 300px; /* Más altura para las cartas de planes */
+  height: 300px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .row .col-md-4 {
   display: flex;
-  align-items: stretch; /* Hace que todas las columnas estiren su contenido */
+  align-items: stretch; 
 }
 
-/* Estilo de los títulos */
+
 .section-title {
   background: linear-gradient(90deg, #007bff, #0056b3);
   color: white;
@@ -193,7 +190,7 @@ export default {
   color: #007bff;
 }
 
-/* Ajustes de texto */
+
 .fs-4 {
   font-size: 1rem;
 }
@@ -212,19 +209,19 @@ export default {
 .image-with-text img {
   width: 98%;
   height: 400px;
-  border-radius: 50px; /* Bordes redondeados */
+  border-radius: 50px; 
 }
 
 .text-overlay {
   position: absolute;
-  top: 1cm; /* Margen de 3 cm desde la parte superior */
-  right: 6cm; /* Margen de 3 cm desde la parte derecha */
-  color: black; /* Texto en color negro */
-  font-size: 50px !important; /* Aumento el tamaño del texto a 12rem */
-  font-weight: bold !important; /* Hago el texto más grueso */
-  font-family: 'Bebas Neue', sans-serif !important; /* Usamos la fuente Bebas Neue */
-  white-space: nowrap; /* Evita que el texto se rompa */
-  padding: 10px 20px; /* Espaciado alrededor del texto */
+  top: 1cm; 
+  right: 6cm; 
+  color: black; 
+  font-size: 50px !important; 
+  font-weight: bold !important; 
+  font-family: 'Bebas Neue', sans-serif !important; 
+  white-space: nowrap; 
+  padding: 10px 20px; 
 }
 
 
