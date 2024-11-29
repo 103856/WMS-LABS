@@ -14,9 +14,7 @@
     </main>
 
     <!-- Pie de página -->
-    <footer class="footer">
-      <p>© 2024 WMS Labs. Todos los derechos reservados.</p>
-    </footer>
+    <Footer />
   </div>
 </template>
 
@@ -26,6 +24,7 @@ import NavigationMenu from '@/components/NavigationMenu.vue';
 import CardSection from '@/components/CardSection.vue';
 import GlassSplitSection from '@/components/GlassSplitSection.vue';
 import Gallery from '@/components/Gallery.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'DefaultLayout',
@@ -34,7 +33,8 @@ export default {
     NavigationMenu,
     CardSection,
     GlassSplitSection,
-    Gallery
+    Gallery,
+    Footer
   },
   data() {
     return {
