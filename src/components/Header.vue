@@ -12,7 +12,9 @@
             Saber más <i class="bi bi-arrow-right-circle-fill"></i>
           </button>
           <button @click="$emit('scroll')" class="contact-button">
-            Contacto <i class="bi bi-arrow-right-circle-fill"></i>
+            <router-link to="/ContactPage">
+              Contacto <i class="bi bi-arrow-right-circle-fill"></i>
+            </router-link>
           </button>
         </div>
 

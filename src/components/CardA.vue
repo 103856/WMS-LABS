@@ -30,7 +30,7 @@
   }
   .card-icon {
     font-size: 40px;
-    color: #007bff;
+    color: #2dca9b;
     margin-bottom: 15px;
   }
   .card-title {

@@ -91,9 +91,9 @@
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background-color: #007bff;
+    background-color: #00ffaa;
     border-radius: 50%;
-    color: white;
+    color: rgb(42, 68, 46);
     font-size: 1.5rem;
     display: flex;
     justify-content: center;

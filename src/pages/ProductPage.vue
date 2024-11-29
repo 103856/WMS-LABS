@@ -1,5 +1,6 @@
 <template>
   
+  <NavigationMenu />
   <div class="container my-5">
  
     <div class="row mb-4">
@@ -73,8 +74,13 @@
 </template>
 
 <script>
+
+import NavigationMenu from '@/components/NavigationMenu.vue';
 export default {
   name: "ProductPage",
+  components: {
+    NavigationMenu,
+  },
   data() {
     return {
       cards: [
