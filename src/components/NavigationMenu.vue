@@ -19,7 +19,7 @@
             <router-link class="nav-link" to="/ProductPage">Producto</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/ContactPage">Sobre Nosotros</router-link>
+            <router-link class="nav-link" to="/AboutUsPage">Contacto</router-link>
           </li>
         </ul>
       </div>
