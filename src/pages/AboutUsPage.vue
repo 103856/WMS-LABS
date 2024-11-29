@@ -29,6 +29,27 @@
               tecnológicas innovadoras. Nos especializamos en desarrollo ágil, diseño
               de software y aplicaciones adaptadas a tus necesidades.
             </p>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Software personalizado
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Equipos expertos en tecnología
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Soporte técnico garantizado
+              </li>
+            </ul>
+            <h2 class="mb-3 fw-bold">Nuestra Visión</h2>
+            <p>
+              Ser líderes globales en el desarrollo de soluciones tecnológicas que transformen negocios y vidas. Nos
+              esforzamos por construir un futuro donde la innovación sea accesible para todos. Queremos inspirar a
+              empresas a soñar en grande y acompañarlas en el camino hacia el éxito, con herramientas que no solo
+              resuelvan problemas, sino que también creen oportunidades sin límites.
+            </p>
           </div>
         </div>
       </div>
@@ -46,6 +67,8 @@
               </div>
             </div>
           </div>
+
+          
           <div class="col-md-4">
             <div class="card shadow-sm">
               <div class="card-body text-center">
@@ -63,6 +86,32 @@
                 <p class="card-text">Optimiza tus procesos con tecnología avanzada.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5 bg-light">
+        <h2 class="text-center mb-4 fw-bold">Nuestro equipo</h2>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" class="img-fluid rounded-circle mb-3" />
+            <h5 class="fw-bold">Andres Cañon</h5>
+            <p class="text-muted">Desarrollador Full-Stack</p>
+          </div>
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" class="img-fluid rounded-circle mb-3" />
+            <h5 class="fw-bold">Karen Figueredo</h5>
+            <p class="text-muted">Especialista en UI/UX</p>
+          </div>
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" class="img-fluid rounded-circle mb-3" />
+            <h5 class="fw-bold">Miguel Achury</h5>
+            <p class="text-muted">Analista de Sistemas</p>
+          </div>
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" class="img-fluid rounded-circle mb-3" />
+            <h5 class="fw-bold">Julian Cañon</h5>
+            <p class="text-muted">Desarrollador</p>
           </div>
         </div>
       </div>
