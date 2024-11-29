@@ -29,10 +29,10 @@ export default {
   data() {
     return {
       imagenes: [
-        { src: "https://via.placeholder.com/300", alt: "Imagen 1" },
-        { src: "https://via.placeholder.com/300", alt: "Imagen 2" },
-        { src: "https://via.placeholder.com/300", alt: "Imagen 3" },
-        { src: "https://via.placeholder.com/300", alt: "Imagen 4" },
+        { src: "https://images.pexels.com/photos/360438/pexels-photo-360438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt: "Imagen 1" },
+        { src: "https://images.pexels.com/photos/17469127/pexels-photo-17469127/free-photo-of-mujer-mano-tecnologia-sujetando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt: "Imagen 2" },
+        { src: "https://images.pexels.com/photos/163117/keyboard-white-computer-keyboard-desktop-163117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt: "Imagen 3" },
+        { src: "https://images.pexels.com/photos/11025645/pexels-photo-11025645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt: "Imagen 4" },
       ],
       modalOpen: false,
       selectedImage: {},

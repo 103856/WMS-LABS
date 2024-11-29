@@ -1,4 +1,5 @@
 <template>
+  <NavigationMenu />
   <div class="contact-container container py-5">
     <div class="steps row mb-5">
       <div class="col-md-4">
@@ -74,7 +75,7 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary w-100">
+          <button type="submit" class="btn btn-secondary w-100">
             <i class="fas fa-paper-plane me-2"></i> Enviar
           </button>
         </form>
@@ -112,8 +113,13 @@
 </template>
 
 <script>
+
+import NavigationMenu from '@/components/NavigationMenu.vue';
 export default {
   name: "Contact",
+  components: {
+    NavigationMenu,
+  },
   data() {
     return {
       form: {
@@ -137,10 +143,11 @@ export default {
 <style scoped>
 .contact-container {
   font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
 }
 
 .step-box {
-  border: 2px solid #007bff;
+  border: 2px solid #00ff9d;
   border-radius: 10px;
   background-color: #f8f9fa;
   transition: transform 0.3s ease;
@@ -153,7 +160,7 @@ export default {
 .step-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #007bff;
+  color: #00ff9d;
 }
 
 .step-description {
