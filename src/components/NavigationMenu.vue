@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <nav class="navbar navbar-expand-lg custom-navbar" :class="{ 'scrolled': isScrolled }">
     <div class="container">
       <a class="navbar-brand" href="#hero">WMS Labs</a>
       <button class="navbar-toggler" 
-      type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
+        type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -19,7 +19,7 @@
             <router-link class="nav-link" to="/ProductPage">Producto</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/ContactPage">Sobre Nosotros</router-link>
+            <router-link class="nav-link" to="/ContactPage">Contacto</router-link>
           </li>
         </ul>
       </div>
@@ -28,7 +28,28 @@
 </template>
 
 <script>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
 export default {
   name: "NavigationMenu",
+  setup() {
+    const isScrolled = ref(false);
+
+    const handleScroll = () => {
+      isScrolled.value = window.scrollY > 100; // Detecta scroll mayor a 100px (ajustable)
+    };
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+
+    return {
+      isScrolled,
+    };
+  },
 };
 </script>
