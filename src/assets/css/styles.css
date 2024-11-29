@@ -32,22 +32,66 @@
 
 
 body {
-  
-  font-family: 'Poppins', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--color-flash-white);
+    background-color: var(--color-dark-green);
 }
 
-/* Estilo Global para Botones */
+.navbar {
+    top: 0;
+    padding: 15px 0;
+    width: 100%;
+    background: transparent;
+    transition: 0.3s ease;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    box-shadow: 0px 8px 20px -10px var(--color-mint-green);
+    color: white;
+    background-color: var(--color-lime-green);
+    border-radius: 0 0 12px 12px;
+    .navbar-brand,
+    .nav-item a {
+        color: var(--color-dark-green);
+    }
+}
+
+.content-section {
+    background-color: var(--color-green-black);
+    margin: 0;
+    height: 2000px;
+}
+
+.navbar-brand,
+.nav-item a {
+    color: var(--color-pistachio-gray);
+    font-weight: 500;
+}
+
+.navbar-brand:hover,
+.nav-item a:hover {
+    color: var(--color-mint-green);
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+
 button {
     background-color: var(--color-lime-green);
-    color: var(--color-flash-white);
+    color: var(--color-dark-green);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+}
+
+button i {
+    color: var(--color-flash-white);
 }
 
 h2,
@@ -64,15 +108,11 @@ a {
     color: inherit;
 }
 
-a:hover {
-    color: #aaa;
-}
-
-/* Flexbox para centrar contenidos */
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .clearfix::after {
@@ -81,39 +121,96 @@ a:hover {
     clear: both;
 }
 
-.hero {
+.hero-layout {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; 
-    padding: 20px;
-    background-color: var(--color-green-black);
-    background-image: linear-gradient(43deg, var(--color-green-black) 0%, var(--color-dark-green) 46%, var(--color-green) 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
+    flex-direction: row;
 }
 
 .hero-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
-    max-width: 60%; /* Reducir el tamaño del contenido para que se vea más centrado */
-    text-align: center;
+    max-width: 60%;
     z-index: 2;
 }
 
-.hero-image {
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-green-black);
+    background-image: linear-gradient(43deg, var(--color-green-black) 0%, var(--color-dark-green) 46%, var(--color-green) 100%);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    padding-top: 250px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    background-image: linear-gradient(43deg, var(--color-green-black) 0%, var(--color-dark-green) 46%, var(--color-green) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    height: 15%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-green-black) 100%);
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero-content h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hero-image {
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: auto;
 }
 
 .hero-image img {
-    max-width: 80%;
+    max-width: 50%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.8));
+}
+
+.cta-content button {
+    margin-right: 1.5rem;
+    padding: 10px 35px;
+}
+
+.cta-content .contact-button {
+    background-color: transparent;
+    border: 1px solid var(--color-lime-green);
+    color: var(--color-lime-green);
+    margin-left: 1.5rem;
+    padding: 10px 35px;
+
+}
+
+.cta-content .contact-button:hover {
+    background-color: var(--color-lime-green);
+    color: var(--color-dark-green);
+    margin-right: 1.5rem;
+    transition: 0.2s;
+
+    i {
+        color: var(--color-dark-green);
+    }
 }
 
 .mini-gallery-container {
@@ -121,27 +218,34 @@ a:hover {
     flex-direction: column;
     padding: 40px 0;
     width: 100%;
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--color-pistachio-gray);
+    }
 }
 
-.mini-gallery-container h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
+.cta-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
 }
 
-/* Estilo para el gallery de iconos */
 .icon-slider {
     display: flex;
     overflow-x: auto;
     gap: 20px;
     padding: 10px 0;
     scrollbar-width: none;
-    /* Ocultar scrollbar en Firefox */
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
 }
+
 
 .icon-slider::-webkit-scrollbar {
     display: none;
-    /* Ocultar scrollbar en Chrome, Safari y Edge */
 }
 
 .icon-container {
@@ -152,22 +256,14 @@ a:hover {
 }
 
 .icon-container i {
-    font-size: 48px;
-    color: #007bff;
+    color: var(--color-flash-white);
+    font-size: 40px;
 }
 
 .icon-container p {
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
-}
-
-/* Estilo del footer */
-.footer{
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
 }
 
 .gallery-section {
@@ -190,9 +286,9 @@ a:hover {
 
 .gallery-item img:hover {
     transform: scale(1.05);
-  }
-  
-  .modal {
+}
+
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -203,21 +299,21 @@ a:hover {
     justify-content: center;
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     position: relative;
     background: white;
     padding: 20px;
     border-radius: 10px;
-  }
-  
-  .modal-content img {
+}
+
+.modal-content img {
     max-width: 100%;
     height: auto;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -225,13 +321,19 @@ a:hover {
     border: none;
     font-size: 18px;
     cursor: pointer;
-  }
-  
-  .modal-overlay {
+}
+
+.modal-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
