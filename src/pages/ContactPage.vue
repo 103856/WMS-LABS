@@ -1,4 +1,5 @@
 <template>
+  <div>
   <NavigationMenu />
   <div class="contact-container container py-5">
     <div class="steps row mb-5">
@@ -110,6 +111,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -138,6 +140,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style scoped>

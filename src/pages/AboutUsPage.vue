@@ -1,4 +1,5 @@
 <template>
+  <div>
   <NavigationMenu />
   <div class="about-us">
 
@@ -161,6 +162,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
