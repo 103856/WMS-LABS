@@ -51,6 +51,10 @@ export default {
 .gallery-section {
   padding: 40px 20px;
   text-align: center;
+  h2{
+    color: var(--color-ice-white);
+    font-weight: 600;
+  }
 }
 .gallery-grid {
   display: grid;

@@ -91,9 +91,9 @@
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background-color: #00ffaa;
+    background-color: var(--color-secondary-yellow);
     border-radius: 50%;
-    color: rgb(42, 68, 46);
+    color: var(--color-dark-blue);
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -105,10 +105,11 @@
     display: flex;
     align-items: center;
     margin-left: 80px;
+    padding: 1rem;
   }
   
   .timeline-item .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-right: 20px;
     color: white;
   }
@@ -122,6 +123,7 @@
   .timeline-item p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
+    margin-left: 25rem;
   }
   </style>
   

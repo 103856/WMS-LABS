@@ -36,7 +36,7 @@ export default {
     const isScrolled = ref(false);
 
     const handleScroll = () => {
-      isScrolled.value = window.scrollY > 100; // Detecta scroll mayor a 100px (ajustable)
+      isScrolled.value = window.scrollY > 10; 
     };
 
     onMounted(() => {
