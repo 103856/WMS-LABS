@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer bg-dark text-white py-5">
+  <footer class="footer py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -12,7 +12,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <h5 class="footer-title">Redes Sociales</h5>
+          <h5 class="footer-title">Nuestras redes</h5>
           <ul class="list-unstyled">
             <li><a href="https://www.linkedin.com" class="footer-link text-white"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             <li><a href="https://www.github.com" class="footer-link text-white"><i class="fab fa-github"></i> GitHub</a></li>
@@ -45,7 +45,10 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #000000 !important;
+  background-color: var(--color-secondary-dark-blue);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-ice-white);
 }
 
 .footer-title {
@@ -63,7 +66,8 @@ export default {
 }
 
 .footer-link:hover {
-  color: #00df82;
+  color: var(--color-secondary-yellow);
+  transition: 0.5s;
 }
 
 .text-white {
@@ -85,5 +89,9 @@ p {
 
 hr.bg-light {
   border-color: #fff;
+}
+
+main {
+  padding: 2rem 1rem;
 }
 </style>

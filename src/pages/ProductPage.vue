@@ -1,6 +1,7 @@
 <template>
   
   <NavigationMenu />
+  <SecondaryHeaderSection title="¿Qué te ofrecemos?" />
   <div class="container my-5">
  
     <div class="row mb-4">
@@ -51,7 +52,7 @@
               pequeñas empresas.
             </p>
             <p class="card-text price fs-5">$29.99/mes</p>
-            <button class="btn btn-primary">Pagar</button>
+            <button class="btn">Elegir</button>
           </div>
         </div>
       </div>
@@ -65,7 +66,7 @@
               empresas, con soporte prioritario y personalización.
             </p>
             <p class="card-text price fs-5">$99.99/mes</p>
-            <button class="btn btn-primary">Pagar</button>
+            <button class="btn">Elegir</button>
           </div>
         </div>
       </div>
@@ -76,9 +77,13 @@
 <script>
 
 import NavigationMenu from '@/components/NavigationMenu.vue';
+import PreviewSection from '@/components/PreviewSection.vue';
+import SecondaryHeaderSection from '@/components/SecondaryHeaderSection.vue';
 export default {
   name: "ProductPage",
   components: {
+    SecondaryHeaderSection,
+    PreviewSection,
     NavigationMenu,
   },
   data() {
@@ -156,13 +161,15 @@ export default {
   justify-content: center;
 }
 
-
+.btn{
+  background-color: var(--color-secondary-yellow);
+  font-weight: 600;
+  margin: 1rem 6rem;
+  border-radius: 25px;
+}
 .card-title {
   font-size: 1rem;
   font-weight: bold;
-}
-.section-title {
-  font-family: 'Poppins', sans-serif;
 }
 
 .card-text {
@@ -182,18 +189,17 @@ export default {
 
 
 .section-title {
-  background: linear-gradient(90deg, #007bff, #0056b3);
-  color: white;
+  color: var(--color-secondary-yellow);
+  font-weight: 600;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
 }
 
-/* Precio */
 .price {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #007bff;
+  color: var(--color-secondary-yellow);
 }
 
 

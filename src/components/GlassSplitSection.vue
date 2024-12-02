@@ -2,10 +2,12 @@
     <section class="glass-split-section">
       <div class="left">
         <h1 class="split-title">
-          <span class="text-left">{{ title }}</span>
+          <span class="text-left">{{ ltitle }}</span>
         </h1>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <span class="text-left">{{ rtitle }}</span>
+      </div>
     </section>
   </template>
   
@@ -13,7 +15,12 @@
   export default {
     name: 'GlassSplitSection',
     props: {
-      title: {
+      ltitle: {
+        type: String,
+        required: true,
+        default: 'Innovación que transforma',
+      },
+      rtitle: {
         type: String,
         required: true,
         default: 'Innovación que transforma',
@@ -27,7 +34,7 @@
     display: flex;
     height: 100vh;
     width: 100%;
-    background: url('https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/3695354/pexels-photo-3695354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
     position: relative;
   }
   
@@ -45,8 +52,6 @@
     color: white;
     position: relative;
     z-index: 1;
-    display: flex;
-    justify-content: center;
   }
   
   .right {
@@ -54,10 +59,6 @@
   }
   
   .split-title {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;

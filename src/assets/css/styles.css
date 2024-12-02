@@ -1,33 +1,14 @@
 :root {
-    /* Colores Primarios */
-    --color-green-black: rgb(2, 26, 26);
-    /* #021A1A */
-    --color-dark-green: rgb(4, 34, 34);
-    /* #042222 */
-    --color-green: rgb(3, 98, 76);
-    /* #03624C */
-    --color-mint-green: rgb(44, 194, 149);
-    /* #2CC295 */
-    --color-lime-green: rgb(0, 223, 130);
-    /* #00DF82 */
-    --color-flash-white: rgb(241, 247, 247);
-    /* #F1F7F7 */
-
-    /* Colores Secundarios */
-    --color-pine-green: rgb(6, 48, 44);
-    /* #06302C */
-    --color-basil-green: rgb(11, 69, 57);
-    /* #0B4539 */
-    --color-forest-green: rgb(8, 85, 67);
-    /* #085543 */
-    --color-frog-green: rgb(23, 135, 110);
-    /* #17876E */
-    --color-secondary-mint-green: rgb(46, 169, 140);
-    /* #2EA98C */
+    
+    --color-dark-blue: rgb(43, 50, 78);            /* #2B324E */
+    --color-secondary-dark-blue: rgb(64, 70, 104); /* #404668 */
+    --color-gray-blue: rgb(102, 111, 152);         /* #666F98 */
+    --color-light-gray: rgb(212, 216, 237);        /* #D4D8ED */
+    --color-ice-white: rgb(254, 254, 254);         /* #FEFEFE */
+    
+    
+    --color-secondary-yellow: rgb(247, 177, 118);  /* #F7B176 */
     --color-stone-gray: rgb(111, 125, 125);
-    /* #6F7D7D */
-    --color-pistachio-gray: rgb(170, 203, 196);
-    /* #AACBC4 */
 }
 
 
@@ -37,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--color-dark-green);
+    background-color: var(--color-dark-blue);
 }
 
 .navbar {
@@ -51,39 +32,39 @@ body {
 }
 
 .navbar.scrolled {
-    box-shadow: 0px 8px 20px -10px var(--color-mint-green);
+    box-shadow: 0px 8px 20px -10px var(--color-secondary-yellow);
     color: white;
-    background-color: var(--color-lime-green);
+    background-color: var(--color-secondary-yellow);
     border-radius: 0 0 12px 12px;
     .navbar-brand,
     .nav-item a {
-        color: var(--color-dark-green);
+        color: var(--color-dark-blue);
     }
 }
 
 .content-section {
-    background-color: var(--color-green-black);
+    background-color: var(--color-dark-blue);
     margin: 0;
     height: 2000px;
 }
 
 .navbar-brand,
 .nav-item a {
-    color: var(--color-pistachio-gray);
+    color: var(--color-light-gray);
     font-weight: 500;
 }
 
 .navbar-brand:hover,
 .nav-item a:hover {
-    color: var(--color-mint-green);
+    color: var(--color-secondary-yellow);
     font-weight: 500;
     transition: 0.5s;
 }
 
 
 button {
-    background-color: var(--color-lime-green);
-    color: var(--color-dark-green);
+    background-color: var(--color-secondary-yellow);
+    color: var(--color-dark-blue);
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
@@ -91,7 +72,7 @@ button {
 }
 
 button i {
-    color: var(--color-flash-white);
+    color: var(--color-ice-white);
 }
 
 h2,
@@ -102,7 +83,6 @@ p {
     padding: 0;
 }
 
-/* Estilo para Links */
 a {
     text-decoration: none;
     color: inherit;
@@ -138,8 +118,7 @@ a {
 .hero {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-green-black);
-    background-image: linear-gradient(43deg, var(--color-green-black) 0%, var(--color-dark-green) 46%, var(--color-green) 100%);
+    background: linear-gradient(0deg, var(--color-dark-blue) 0%, var(--color-secondary-dark-blue) 50%, var(--color-gray-blue) 100%);
     justify-content: flex-start;
     align-items: center;
     padding: 50px;
@@ -147,8 +126,6 @@ a {
     color: white;
     position: relative;
     overflow: hidden;
-
-    background-image: linear-gradient(43deg, var(--color-green-black) 0%, var(--color-dark-green) 46%, var(--color-green) 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -159,7 +136,7 @@ a {
     left: 0;
     width: 100%;
     height: 15%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-green-black) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-dark-blue) 100%);
     z-index: 1;
 }
 
@@ -195,21 +172,25 @@ a {
 
 .cta-content .contact-button {
     background-color: transparent;
-    border: 1px solid var(--color-lime-green);
-    color: var(--color-lime-green);
+    border: 1px solid var(--color-secondary-yellow);
+    color: var(--color-secondary-yellow);
     margin-left: 1.5rem;
     padding: 10px 35px;
+
+    i {
+        color: var(--color-secondary-yellow);
+    }
 
 }
 
 .cta-content .contact-button:hover {
-    background-color: var(--color-lime-green);
-    color: var(--color-dark-green);
+    background-color: var(--color-secondary-yellow);
+    color: var(--color-dark-blue);
     margin-right: 1.5rem;
     transition: 0.2s;
 
     i {
-        color: var(--color-dark-green);
+        color: var(--color-dark-blue);
     }
 }
 
@@ -223,7 +204,7 @@ a {
         font-size: 20px;
         text-align: center;
         margin-bottom: 20px;
-        color: var(--color-pistachio-gray);
+        color: var(--color-light-gray);
     }
 }
 
@@ -329,11 +310,4 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
 }
