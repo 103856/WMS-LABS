@@ -16,7 +16,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import TimelineSection from '@/components/TimelineSection.vue';
 import CardSection from '@/components/CardSection.vue';
 import GlassSplitSection from '@/components/GlassSplitSection.vue';
-import Gallery from '@/components/Gallery.vue';
+import Gallery from '@/components/StaticGallery.vue';
 
 export default {
   name: 'HomePage',

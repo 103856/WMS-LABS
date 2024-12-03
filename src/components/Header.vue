@@ -20,7 +20,7 @@
 
       </div>
       <div class="hero-image">
-        <img src="https://pngimg.com/d/laptop_PNG101784.png" alt="Header Image" />
+        <img src="/src/assets/img/app-hero-preview.png" alt="Header Image" />
       </div>
     </div>
     <div class="mini-gallery-container">

@@ -14,7 +14,7 @@ import NavigationMenu from '@/components/NavigationMenu.vue';
 import Header from '@/components/Header.vue';
 import CardSection from '@/components/CardSection.vue';
 import GlassSplitSection from '@/components/GlassSplitSection.vue';
-import Gallery from '@/components/Gallery.vue';
+import Gallery from '@/components/StaticGallery.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
