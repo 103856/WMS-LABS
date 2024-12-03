@@ -53,35 +53,9 @@
 
         <div class="container py-5">
           <h2 class="text-center mb-4 fw-bold ">¿Qué ofrecemos?</h2>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fas fa-laptop-code fa-3x  mb-3"></i>
-                  <h5 class="card-title fw-bold">Desarrollo Web</h5>
-                  <p class="card-text">Creamos páginas y aplicaciones modernas y responsivas.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fas fa-mobile-alt fa-3x  mb-3"></i>
-                  <h5 class="card-title fw-bold">Apps Móviles</h5>
-                  <p class="card-text">Aplicaciones móviles que conectan con tus clientes.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fas fa-chart-line fa-3x  mb-3"></i>
-                  <h5 class="card-title fw-bold">Consultoría IT</h5>
-                  <p class="card-text">Optimiza tus procesos con tecnología avanzada.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <CardSection :cards="cardData" />
+
         </div>
         <h2 class="text-center mb-4 fw-bold ">Nuestro equipo</h2>
         <div class="container py-5 card">
@@ -224,6 +198,7 @@
         </div>
 
       </div>
+      <DynamicGallery />
     </DefaultLayout>
   </div>
 </template>
@@ -231,12 +206,47 @@
 <script>
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import SecondaryHeaderSection from '@/components/SecondaryHeaderSection.vue';
+import CardSection from '@/components/CardSection.vue';
+import DynamicGallery from '@/components/DynamicGallery.vue';
 
 export default {
   name: "AboutUs",
   components: {
     DefaultLayout,
+    CardSection,
     SecondaryHeaderSection,
+    DynamicGallery
+  },
+  data() {
+    return {
+      steps: [
+        { icon: 'bi bi-gear-fill', title: 'Paso 1', description: 'Descripción del primer paso.' },
+        { icon: 'bi bi-search', title: 'Paso 2', description: 'Descripción del segundo paso.' },
+        { icon: 'bi bi-bar-chart-line', title: 'Paso 3', description: 'Descripción del tercer paso.' },
+        { icon: 'bi bi-house-fill', title: 'Paso 4', description: 'Descripción del cuarto paso.' },
+      ],
+      cardData: [
+        {
+          icon: 'laptop',
+          title: 'Desarrollo Web',
+          description: 'Creamos páginas y aplicaciones modernas y responsivas.',
+          type: 'A',
+        },
+        {
+          icon: 'phone',
+          title: 'Apps móviles',
+          description: 'Aplicaciones móviles que conectan con tus clientes.',
+          type: 'A',
+        },
+        {
+          icon: 'graph-up',
+          title: 'Consultoría IT',
+          description: 'Digitalizamos y optimizamos procesos para maximizar la eficiencia de tu negocio.',
+          type: 'A',
+        },
+      ],
+
+    };
   },
 };
 </script>

@@ -13,7 +13,7 @@
   
   <script>
   import CardA from "./CardA.vue";
-  import CardB from "./CardB.vue";
+  import CardB from "./DynamicCard.vue";
   
   export default {
     name: "CardSection",

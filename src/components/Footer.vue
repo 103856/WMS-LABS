@@ -13,15 +13,16 @@
         </div>
         <div class="col-md-3">
           <h5 class="footer-title">Nuestras redes</h5>
-          <ul class="list-unstyled">
-            <li><a href="https://www.linkedin.com" class="footer-link text-white"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li><a href="https://www.github.com" class="footer-link text-white"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a href="https://www.twitter.com" class="footer-link text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <ul class="list-unstyled social">
+            <a href="https://www.linkedin.com" class="socialContainer ln"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.github.com" class="socialContainer gh"><i class="fab fa-github"></i></a>
+            <a href="https://www.twitter.com" class="socialContainer x"><i class="bi bi-twitter-x"></i></a>
           </ul>
         </div>
         <div class="col-md-3">
           <h5 class="footer-title">Sobre Nosotros</h5>
-          <p>En WMS Labs, nos especializamos en ofrecer soluciones de desarrollo de software a medida, con un enfoque en la innovación, escalabilidad y rendimiento. Transformamos tu negocio con las últimas tecnologías.</p>
+          <p>En WMS Labs, nos especializamos en ofrecer soluciones de desarrollo de software a medida, con un enfoque en
+            la innovación, escalabilidad y rendimiento. Transformamos tu negocio con las últimas tecnologías.</p>
         </div>
         <div class="col-md-3">
           <h5 class="footer-title">Contacto</h5>
@@ -53,7 +54,7 @@ export default {
 
 .footer-title {
   font-weight: bold;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -62,7 +63,7 @@ export default {
   color: #fff;
   margin-bottom: 0.5rem;
   display: block;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
 }
 
 .footer-link:hover {
@@ -93,5 +94,42 @@ hr.bg-light {
 
 main {
   padding: 2rem 1rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  border-radius: 5px;
+}
+
+.ln:hover {
+  background-color: #000268;
+  transition-duration: .3s;
+}
+
+.gh:hover {
+  background-color: #686868;
+  transition-duration: .3s;
+}
+
+.x:hover {
+  background-color: #222222;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
 }
 </style>
