@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout>
-    <Header :titulo="title" :subtitulo="subtitle" :span="span" @scroll="scrollToContent" />
+    <CarouselHeader :slides="slides" />
 
     <GlassSplitSection />
 
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
+import CarouselHeader from "@/components/CarouselHeader.vue";
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import TimelineSection from '@/components/TimelineSection.vue';
 import CardSection from '@/components/CardSection.vue';
@@ -21,9 +21,9 @@ import Gallery from '@/components/StaticGallery.vue';
 export default {
   name: 'HomePage',
   components: {
-    Header,
     CardSection,
     GlassSplitSection,
+    CarouselHeader,
     Gallery,
     DefaultLayout,
     TimelineSection,
@@ -59,6 +59,26 @@ export default {
           title: 'Optimización de procesos',
           description: 'Digitalizamos y optimizamos procesos para maximizar la eficiencia de tu negocio.',
           type: 'A',
+        },
+      ],
+      slides: [
+        {
+          titulo: "Cautiva a tus clientes con sitios web impactantes",
+          subtitulo: "Creamos páginas web modernas, optimizadas y personalizadas para destacar en el mercado digital.",
+          span: "Diseña tu presencia",
+          image: "https://images.pexels.com/photos/21228355/pexels-photo-21228355/free-photo-of-telefono-inteligente-ordenador-portatil-tecnologia-teclado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        },
+        {
+          titulo: "Potencia tu plataforma con integraciones eficientes",
+          subtitulo: "Integramos tu frontend con sistemas backend robustos para mejorar la experiencia del usuario y la escalabilidad.",
+          span: "Conecta y optimiza",
+          image: "https://images.pexels.com/photos/14666034/pexels-photo-14666034.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        },
+        {
+          titulo: "Transforma ideas en aplicaciones exitosas",
+          subtitulo: "Desarrollamos aplicaciones innovadoras que resuelven problemas y generan valor para tu negocio.",
+          span: "Impulsa tu visión",
+          image: "https://images.pexels.com/photos/3973978/pexels-photo-3973978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         },
       ],
 
