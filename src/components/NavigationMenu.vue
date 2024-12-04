@@ -13,10 +13,10 @@
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/AboutUsPage">Sobre Nosotros</a>
+            <router-link class="nav-link" to="/ProductPage">Servicios</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/ProductPage">Producto</router-link>
+            <a class="nav-link" href="/AboutUsPage">Sobre Nosotros</a>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/ContactPage">Contacto</router-link>
