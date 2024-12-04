@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="card"
-    :class="{ 'hover-card': isHovered, 'blur-card': isBlurred }"
-    @mouseover="$emit('hover', index)"
-    @mouseleave="$emit('hover', null)"
-  >
+  <div class="card" :class="`position-${position}`">
     <img :src="image" :alt="name" />
     <div class="card-info">
       <h2>{{ name }}</h2>
@@ -17,26 +12,25 @@
 export default {
   name: "DynamicCard",
   props: {
-    image: String,
-    name: String,
-    location: String,
-    index: Number,
-    isHovered: Boolean,
-    isBlurred: Boolean,
+    image: { type: String, required: true },
+    name: { type: String, required: true },
+    location: { type: String, required: true },
+    position: Number, 
   },
 };
 </script>
 
 <style scoped>
 .card {
+  margin: 3%;
   width: 200px;
   height: 300px;
-  transition: all 0.5s ease;
-  transform: scale(1);
-  position: relative;
+  position: absolute;
+  transition: transform 0.6s ease, opacity 0.6s ease;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border-top-left-radius: 25px;
+  box-shadow: 0px 10px 10px rgb(73, 70, 92);
 }
 
 .card img {
@@ -45,25 +39,28 @@ export default {
   object-fit: cover;
 }
 
-.card-info {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.position-0 {
+  transform: scale(1.2) translateX(0px) translateZ(50px);
+  z-index: 5;
 }
 
-/* Efecto hover: agrandar la tarjeta */
-.hover-card {
-  transform: scale(1.2);
-  z-index: 10;
+.position--1 {
+  transform: scale(1) translateX(-200px) translateZ(-10px);
+  z-index: 4;
 }
 
-/* Aplicar efecto blur a las tarjetas que no están en hover */
-.blur-card {
-  filter: blur(4px);
-  opacity: 0.6;
-  transform: scale(0.9);
-  z-index: 1;
+.position-1 {
+  transform: scale(1) translateX(200px) translateZ(-10px);
+  z-index: 4;
+}
+
+.position--2 {
+  transform: scale(0.8) translateX(-400px) translateZ(-20px);
+  z-index: 3;
+}
+
+.position-2 {
+  transform: scale(0.8) translateX(400px) translateZ(-20px);
+  z-index: 3;
 }
 </style>
