@@ -1,11 +1,11 @@
 <template>
-    <header class="hero">
+    <header class="hero" :style="{ backgroundImage: `url(${currentSlide.image})` }">
         <transition name="fade" mode="out-in">
             <div class="hero-layout" v-if="currentSlide" :key="currentSlideIndex">
                 <div class="hero-content">
                     <h5>{{ currentSlide.span }}</h5>
-                    <h1 v-html="currentSlide.titulo"></h1>
-                    <p>{{ currentSlide.subtitulo }}</p>
+                    <h1 v-html="currentSlide.title"></h1>
+                    <p>{{ currentSlide.subtitle }}</p>
 
                     <div class="cta-content">
                         <button @click="$emit('scroll')">
@@ -19,13 +19,9 @@
                     </div>
                 </div>
 
-                <div class="hero-image">
-                    <img :src="currentSlide.image" alt="Header Image" />
-                </div>
             </div>
         </transition>
 
-        <!-- Puntos de navegación -->
         <div class="carousel-indicators">
             <span v-for="(slide, index) in slides" :key="index"
                 :class="['indicator', { active: currentSlideIndex === index }]" @click="goToSlide(index)"></span>
@@ -44,7 +40,7 @@ export default {
         },
         interval: {
             type: Number,
-            default: 5000, // Tiempo entre slides (en milisegundos)
+            default: 5000,
         },
     },
     data() {
@@ -82,10 +78,30 @@ export default {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    padding-top: 200px;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-ice-white) 100%);
+    z-index: 1;
 }
 
 .hero-layout {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -96,7 +112,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
+
 
 .hero-content {
     flex: 1;
@@ -143,5 +161,65 @@ export default {
         inset 3px 3px 6px rgba(0, 0, 0, 0.5),
         inset -1px -1px 4px rgba(255, 255, 255, 0.5);
     transform: scale(1.1);
+}
+
+.hero-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    max-width: 60%;
+    z-index: 2;
+}
+
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero-content h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.cta-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.cta-content button {
+    margin-right: 1.5rem;
+    padding: 10px 35px;
+}
+
+.cta-content .contact-button {
+    background-color: transparent;
+
+    background-color: rgba(255, 255, 255, 0.178);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color-secondary-yellow);
+    color: var(--color-secondary-yellow);
+    margin-left: 1.5rem;
+    padding: 10px 35px;
+
+    i {
+        color: var(--color-secondary-yellow);
+    }
+
+}
+
+.cta-content .contact-button:hover {
+    background-color: var(--color-secondary-yellow);
+    color: var(--color-dark-blue);
+    margin-right: 1.5rem;
+    transition: 0.2s;
+
+    i {
+        color: var(--color-dark-blue);
+    }
 }
 </style>

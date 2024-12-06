@@ -2,8 +2,7 @@
   <nav class="navbar navbar-expand-lg custom-navbar" :class="{ 'scrolled': isScrolled }">
     <div class="container">
       <a class="navbar-brand" href="#hero">WMS Labs</a>
-      <button class="navbar-toggler" 
-        type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,7 +35,7 @@ export default {
     const isScrolled = ref(false);
 
     const handleScroll = () => {
-      isScrolled.value = window.scrollY > 10; 
+      isScrolled.value = window.scrollY > 10;
     };
 
     onMounted(() => {
@@ -53,3 +52,44 @@ export default {
   },
 };
 </script>
+<style>
+.navbar {
+  top: 0;
+  padding: 15px 0;
+  width: 100%;
+  background: transparent;
+  transition: 0.3s ease;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  border-radius: 0 0 12px 12px;
+  background-color: rgba(255, 255, 255, 0.178);
+  backdrop-filter: blur(40px);
+
+  .navbar-brand,
+  .nav-item a {
+    color: var(--color-dark-blue);
+  }
+}
+
+.content-section {
+  background-color: var(--color-dark-blue);
+  margin: 0;
+  height: 2000px;
+}
+
+.navbar-brand,
+.nav-item a {
+  color: var(--color-light-gray);
+  font-weight: 500;
+}
+
+.navbar-brand:hover,
+.nav-item a:hover {
+  color: var(--color-secondary-yellow);
+  font-weight: 500;
+  transition: 0.5s;
+}
+</style>

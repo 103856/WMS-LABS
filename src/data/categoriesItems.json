@@ -1,0 +1,265 @@
+{
+    "categories": [
+      { "name": "Frontend", "categoryId": 1 },
+      { "name": "Backend", "categoryId": 2 },
+      { "name": "CMS", "categoryId": 3 },
+      { "name": "Database", "categoryId": 4 },
+      { "name": "DevOps", "categoryId": 5 },
+      { "name": "Cloud", "categoryId": 6 }
+    ],
+    "items": [
+      {
+        "title": "Vue.js 3",
+        "description": "",
+        "icon": "mdi:vuejs",
+        "categoryId": 1,
+        "itemId": 1
+      },
+      {
+        "title": "React JS",
+        "description": "",
+        "icon": "mdi:react",
+        "categoryId": 1,
+        "itemId": 2
+      },
+      {
+        "title": "NextJS",
+        "description": "",
+        "icon": "lineicons:nextjs",
+        "categoryId": 1,
+        "itemId": 3
+      },
+      {
+        "title": "Typescript",
+        "description": "",
+        "icon": "lineicons:typescript",
+        "categoryId": 1,
+        "itemId": 4
+      },
+      {
+        "title": "HTML",
+        "description": "",
+        "icon": "flowbite:html-solid",
+        "categoryId": 1,
+        "itemId": 5
+      },
+      {
+        "title": "CSS",
+        "description": "",
+        "icon": "flowbite:css-solid",
+        "categoryId": 1,
+        "itemId": 6
+      },
+      {
+        "title": "Javascript",
+        "description": "",
+        "icon": "lineicons:javascript",
+        "categoryId": 1,
+        "itemId": 7
+      },
+      {
+        "title": "GraphQL",
+        "description": "",
+        "icon": "mdi:graphql",
+        "categoryId": 1,
+        "itemId": 8
+      },
+      {
+        "title": "Apollo",
+        "description": "",
+        "icon": "simple-icons:apollographql",
+        "categoryId": 1,
+        "itemId": 9
+      },
+      {
+        "title": "MaterialUI",
+        "description": "",
+        "icon": "devicon-plain:materialui",
+        "categoryId": 1,
+        "itemId": 10
+      },
+      {
+        "title": "RestAPI",
+        "description": "",
+        "icon": "dashicons:rest-api",
+        "categoryId": 1,
+        "itemId": 11
+      },
+      {
+        "title": "Redux",
+        "description": "",
+        "icon": "simple-icons:redux",
+        "categoryId": 1,
+        "itemId": 12
+      },
+      {
+        "title": "NodeJS",
+        "description": "",
+        "icon": "mdi:nodejs",
+        "categoryId": 2,
+        "itemId": 13
+      },
+      {
+        "title": "Python",
+        "description": "",
+        "icon": "lineicons:python",
+        "categoryId": 2,
+        "itemId": 14
+      },
+      {
+        "title": "Php",
+        "description": "",
+        "icon": "ri:php-line",
+        "categoryId": 2,
+        "itemId": 15
+      },
+      {
+        "title": "Java",
+        "description": "",
+        "icon": "ri:java-fill",
+        "categoryId": 2,
+        "itemId": 16
+      },
+      {
+        "title": "Spring",
+        "description": "",
+        "icon": "simple-icons:spring",
+        "categoryId": 2,
+        "itemId": 17
+      },
+      {
+        "title": ".Net",
+        "description": "",
+        "icon": "devicon-plain:dot-net",
+        "categoryId": 2,
+        "itemId": 18
+      },
+      {
+        "title": "Laravel",
+        "description": "",
+        "icon": "mdi:laravel",
+        "categoryId": 2,
+        "itemId": 19
+      },
+      {
+        "title": "Optimizely",
+        "description": "",
+        "icon": "logos:optimizely-icon",
+        "categoryId": 3,
+        "itemId": 20
+      },
+      {
+        "title": "Wordpress",
+        "description": "",
+        "icon": "uil:wordpress",
+        "categoryId": 3,
+        "itemId": 21
+      },
+      {
+        "title": "Shopify",
+        "description": "",
+        "icon": "ic:baseline-shopify",
+        "categoryId": 3,
+        "itemId": 22
+      },
+      {
+        "title": "Strapi",
+        "description": "",
+        "icon": "simple-icons:strapi",
+        "categoryId": 3,
+        "itemId": 23
+      },
+      {
+        "title": "JungleJS",
+        "description": "",
+        "icon": "ph:file-js-light",
+        "categoryId": 3,
+        "itemId": 24
+      },
+      {
+        "title": "MongoDB",
+        "description": "",
+        "icon": "flowbite:mongo-db-solid",
+        "categoryId": 4,
+        "itemId": 25
+      },
+      {
+        "title": "MySQL",
+        "description": "",
+        "icon": "lineicons:mysql",
+        "categoryId": 4,
+        "itemId": 26
+      },
+      {
+        "title": "PostgreSQL",
+        "description": "",
+        "icon": "simple-icons:postgresql",
+        "categoryId": 4,
+        "itemId": 27
+      },
+      {
+        "title": "Nginx",
+        "description": "",
+        "icon": "file-icons:nginx",
+        "categoryId": 5,
+        "itemId": 28
+      },
+      {
+        "title": "Docker",
+        "description": "",
+        "icon": "devicon-plain:docker",
+        "categoryId": 5,
+        "itemId": 29
+      },
+      {
+        "title": "Kubernetes",
+        "description": "",
+        "icon": "mdi:kubernetes",
+        "categoryId": 5,
+        "itemId": 30
+      },
+      {
+        "title": "Gradle",
+        "description": "",
+        "icon": "file-icons:gradle",
+        "categoryId": 5,
+        "itemId": 31
+      },
+      {
+        "title": "Jenkins",
+        "description": "",
+        "icon": "file-icons:jenkins",
+        "categoryId": 5,
+        "itemId": 32
+      },
+      {
+        "title": "AWS",
+        "description": "",
+        "icon": "mdi:aws",
+        "categoryId": 6,
+        "itemId": 33
+      },
+      {
+        "title": "Azure",
+        "description": "",
+        "icon": "lineicons:azure",
+        "categoryId": 6,
+        "itemId": 34
+      },
+      {
+        "title": "Firebase",
+        "description": "",
+        "icon": "mdi:firebase",
+        "categoryId": 6,
+        "itemId": 35
+      },
+      {
+        "title": "Digital Ocean",
+        "description": "",
+        "icon": "gg:digitalocean",
+        "categoryId": 6,
+        "itemId": 36
+      }
+    ]
+  }
+  
