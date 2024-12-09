@@ -8,7 +8,7 @@
             <li><router-link to="/productPage" class="footer-link">Producto</router-link></li>
             <li><router-link to="/AboutUsPage" class="footer-link">Sobre Nosotros</router-link></li>
             <li><router-link to="/contactPage" class="footer-link">Contacto</router-link></li>
-            <li><router-link to="/privacy-policy" class="footer-link">Política de Privacidad</router-link></li>
+            <li><router-link to="#" class="footer-link">Política de Privacidad</router-link></li>
           </ul>
         </div>
         <div class="col-md-3">

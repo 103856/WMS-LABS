@@ -50,6 +50,7 @@
   <style scoped>
   .timeline-section {
     background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+    background-color: var(--color-secondary-dark-blue);
     padding: 40px 0;
     display: flex;
     justify-content: center;

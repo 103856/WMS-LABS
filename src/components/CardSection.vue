@@ -14,12 +14,14 @@
   <script>
   import CardA from "./CardA.vue";
   import CardB from "./DynamicCard.vue";
+import ImageCard from "./ImageCard.vue";
   
   export default {
     name: "CardSection",
     components: {
       CardA,
       CardB,
+      ImageCard
     },
     props: {
       cards: {
@@ -43,6 +45,8 @@
             return "CardA";
           case "B":
             return "CardB";
+          case "I":
+            return "ImageCard";
           default:
             return "CardA"; 
         }
@@ -54,10 +58,10 @@
   <style scoped>
   .card-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
     margin: 3.5rem;
   }
   </style>
