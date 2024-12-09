@@ -38,8 +38,7 @@ export default {
 
 <style scoped>
 .title-description {
-  margin: 4rem 2rem;
-  padding: 0 4rem;
+  padding: 4rem 6rem;
 }
 
 .align-left {

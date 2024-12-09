@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue'; // Importación correcta
+import { Icon } from '@iconify/vue'; 
 import CursorCircle from './CursorCircle.vue';
 export default {
   name: "CategoryFilter",
@@ -119,6 +119,18 @@ export default {
   width: 70%;
   padding: 10px;
 }
+.right-panel::before,
+.right-panel::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.5), transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 0; 
+}
+
 
 .grid {
   display: grid;

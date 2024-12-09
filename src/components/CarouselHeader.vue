@@ -1,6 +1,6 @@
 <template>
-    <header class="hero" :style="{ backgroundImage: `url(${currentSlide.image})` }">
-        <transition name="fade" mode="out-in">
+    <transition name="fade" mode="out-in">
+        <header class="hero" :style="getBackgroundStyle(currentSlide.image)">
             <div class="hero-layout" v-if="currentSlide" :key="currentSlideIndex">
                 <div class="hero-content">
                     <h5>{{ currentSlide.span }}</h5>
@@ -18,16 +18,16 @@
                         </button>
                     </div>
                 </div>
-
             </div>
-        </transition>
 
-        <div class="carousel-indicators">
-            <span v-for="(slide, index) in slides" :key="index"
-                :class="['indicator', { active: currentSlideIndex === index }]" @click="goToSlide(index)"></span>
-        </div>
-    </header>
+            <div class="carousel-indicators">
+                <span v-for="(slide, index) in slides" :key="index"
+                    :class="['indicator', { active: currentSlideIndex === index }]" @click="goToSlide(index)"></span>
+            </div>
+        </header>
+    </transition>
 </template>
+
 
 <script>
 export default {
@@ -40,7 +40,7 @@ export default {
         },
         interval: {
             type: Number,
-            default: 5000,
+            default: 10000000,
         },
     },
     data() {
@@ -69,25 +69,41 @@ export default {
         goToSlide(index) {
             this.currentSlideIndex = index;
         },
+        getBackgroundStyle(imagePath) {
+            const isExternal = /^(https?:\/\/)/.test(imagePath);
+            let resolvedPath = imagePath;
+
+            if (!isExternal) {
+                resolvedPath = new URL(`/src/assets/img/${imagePath}`, import.meta.url).href;
+            }
+
+            return {
+                backgroundImage: `url(${resolvedPath})`,
+            };
+        },
     },
 };
 </script>
 
+
+
 <style scoped>
 .hero {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    padding: 50px;
-    padding-top: 200px;
+    padding-top: 10rem;
     color: white;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/*Gradient*/
 .hero::after {
     content: '';
     position: absolute;
@@ -95,7 +111,7 @@ export default {
     left: 0;
     width: 100%;
     height: 15%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-ice-white) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-dark-blue) 100%);
     z-index: 1;
 }
 
@@ -124,7 +140,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
 
 .fade-enter,
@@ -158,29 +174,34 @@ export default {
 .indicator.active {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5),
         -1px -1px 4px rgba(255, 255, 255, 0.5),
-        inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+        inset 3px 3px 6px rgba(172, 172, 172, 0.5),
         inset -1px -1px 4px rgba(255, 255, 255, 0.5);
     transform: scale(1.1);
 }
 
 .hero-content {
-    margin: auto;
+    margin: 0auto;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 0 3rem;
     max-width: 60%;
     z-index: 2;
-}
+    min-height: 300px;
 
+    h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 90%;
+        margin-bottom: 20px;
+    }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 600;
-}
+    h5 {
 
-.hero-content h5 {
-    font-size: 1rem;
-    font-weight: 500;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
 }
 
 
@@ -188,29 +209,33 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 15px;
-}
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 1.5rem;
 
-.cta-content button {
-    margin-right: 1.5rem;
-    padding: 10px 35px;
-}
+    button {
 
-.cta-content .contact-button {
-    background-color: transparent;
-
-    background-color: rgba(255, 255, 255, 0.178);
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--color-secondary-yellow);
-    color: var(--color-secondary-yellow);
-    margin-left: 1.5rem;
-    padding: 10px 35px;
-
-    i {
-        color: var(--color-secondary-yellow);
+        margin-right: 1.5rem;
+        padding: 10px 35px;
     }
 
+    .contact-button {
+        background-color: transparent;
+
+        background-color: rgba(255, 255, 255, 0.178);
+        backdrop-filter: blur(5px);
+        border: 1px solid var(--color-secondary-yellow);
+        color: var(--color-secondary-yellow);
+        margin-left: 1.5rem;
+        padding: 10px 35px;
+
+        i {
+            color: var(--color-secondary-yellow);
+        }
+
+    }
 }
+
 
 .cta-content .contact-button:hover {
     background-color: var(--color-secondary-yellow);
