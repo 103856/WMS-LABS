@@ -2,34 +2,32 @@
   <DefaultLayout>
     <CarouselHeader :slides="slides" />
     <div class="section solutions">
-      <TitleDescription title="¿Qué hacemos en WMS Labs?"
-        description="Ofrecemos una gama de servicios diseñados para ayudarte a alcanzar tus objetivos tecnológicos."
-        align="center" />
+      <transition name="slide-fade" appear>
+        <TitleDescription v-if="showTitle" title="¿Qué hacemos en WMS Labs?"
+          description="Ofrecemos una gama de servicios diseñados para ayudarte a alcanzar tus objetivos tecnológicos."
+          align="center" />
+      </transition>
       <CardSection :cards="cardData" />
     </div>
     <div class="section featured">
-      <TitleDescription title="Servicios destacados" description="" align="right" />
-      
-      <ImageCard :data="{
-        imageSrc: 'https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg',
-        imageAlt: 'Imagen de ejemplo',
-        title: 'Nuestras Soluciones ',
-        description: 'Ofrecemos una gama de servicios diseñados para ayudarte a alcanzar tus objetivos tecnológicos.',
-        align: 'center'
-      }" />
+      <TitleDescription title="Servicios destacados" description="" align="center" />
 
+
+      <DynamicGallery :cards="dynamicCardsData" />
     </div>
-    <div class="section featured">
-      <TitleDescription title="Tecnologías con las que trabajamos" description="" align="center" />
+    <div class="section techs">
+      <TitleDescription title="Tecnologías con las que trabajamos"
+        description="Estamos a la vanguardia del mercado utilizando los ultimos framweorks y tecnologías para que nuestros clientes tengan seguridad"
+        align="left" />
       <CategoryFilter :categories="categories" :items="items" />
     </div>
 
-    <div>
+    <div class="section featured">
       <TitleDescription title="Proceso de desarrollo"
         description="Este es el proceso de desarrollo para cualquier servicio ofrecido por WMS Labs" align="center" />
+      <TimelineSection :steps="steps" />
     </div>
-    <TimelineSection :steps="steps" />
-    <div class="section featured">
+    <div class="section contact">
       <TitleDescription title="¿Tienes una idea?" description="nosotros la hacemos realidad" align="center" />
       <button>Contáctanos</button>
     </div>
@@ -47,11 +45,13 @@ import CategoryFilter from "@/components/CategoryFilter.vue";
 import categoriesItems from "@/data/categoriesItems.json";
 import ImageCard from "@/components/ImageCard.vue";
 import '@/assets/img/website-mockup.png'
+import DynamicGallery from "@/components/DynamicGallery.vue";
 
 export default {
   name: 'HomePage',
   components: {
     CardSection,
+    DynamicGallery,
     ImageCard,
     GlassSplitSection,
     CarouselHeader,
@@ -62,6 +62,7 @@ export default {
   },
   data() {
     return {
+      showTitle: true,
       steps: [
         { icon: 'bi bi-gear-fill', title: 'Paso 1', description: 'Descripción del primer paso.' },
         { icon: 'bi bi-search', title: 'Paso 2', description: 'Descripción del segundo paso.' },
@@ -70,23 +71,35 @@ export default {
       ],
       slides: [
         {
-          title: "Cautiva a tus clientes </br> con sitios web </br> impactantes",
-          subtitle: "Creamos páginas web modernas, optimizadas y personalizadas para destacar en el mercado digital.",
-          span: "Diseña tu presencia",
           image: 'website-mockup.png',
+          span: 'Diseña tu presencia',
+          title: 'Cautiva a tus clientes </br> con sitios web </br> impactantes',
+          subtitle: 'Creamos páginas web modernas, optimizadas y personalizadas para destacar en el mercado digital.',
+          theme: 'dark',
         },
         {
-          title: "Potencia tu plataforma </br> con integraciones  </br>eficientes",
-          subtitle: "Integramos tu frontend con sistemas backend robustos para mejorar la experiencia del usuario y la escalabilidad.",
-          span: "Conecta y optimiza",
-          image: "website-mockup.png",
+          image: 'laptop-mockup.png',
+          span: 'Conecta y optimiza',
+          title: 'Potencia tu plataforma </br> con integraciones  </br>eficientes',
+          subtitle: 'Integramos tu frontend con sistemas backend robustos para mejorar la experiencia del usuario y la escalabilidad.',
+          theme: 'light',
         },
         {
-          title: "Transforma ideas en aplicaciones </br> exitosas",
-          subtitle: "Desarrollamos aplicaciones innovadoras que resuelven problemas y generan valor para tu negocio.",
-          span: "Impulsa tu visión",
-          image: "website-mockup.png",
-        },
+          image: 'slide3.jpg',
+          span: 'Impulsa tu visión',
+          title: 'Conecta y optimiza',
+          subtitle: 'Desarrollamos aplicaciones innovadoras que resuelven problemas y generan valor para tu negocio.',
+          theme: 'dark',
+        }
+      ],
+      dynamicCardsData: [
+        { name: "Páginas Web", location: "Technology", image: "website-mockup.png", description: "Descripción de Swagger" },
+        { name: "Integraciones", location: "Karachay-Cherkessia", image: "path/to/dombay.jpg", description: "Descripción de Dombay" },
+        { name: "Teletskiy", location: "Altai Republic", image: "path/to/teletskiy.jpg", description: "Descripción de Teletskiy" },
+        { name: "Sheregesh", location: "Siberia", image: "path/to/sheregesh.jpg", description: "Descripción de Sheregesh" },
+        { name: "Big Wood", location: "Murmansk", image: "path/to/big_wood.jpg", description: "Descripción de Big Wood" },
+        { name: "Elbrus", location: "Caucasus", image: "path/to/elbrus.jpg", description: "Descripción de Elbrus" },
+        { name: "Sochi", location: "Black Sea", image: "path/to/sochi.jpg", description: "Descripción de Sochi" },
       ],
       categories: categoriesItems.categories,
       items: categoriesItems.items,
@@ -134,11 +147,30 @@ export default {
 }
 
 .section.featured {
-  background-color: rgb(255, 255, 255);
-  text-align: center;
+  background-color: var(--color-ice-white);
   padding: 50px 20px;
+  color: var(--color-dark-blue);
+
 }
 
+.section.techs {
+  border-radius: 5rem 5rem 0 0;
+  background-color: var(--color-dark-blue);
+  text-align: center;
+  padding: 4rem 4rem;
+  color: var(--color-light-gray);
+  
+  .title-description {
+    padding-right: 20rem;
+  }
+}
+
+.section.contact {
+  background-color: var(--color-ice-white);
+  padding: 50px 20px;
+  color: var(--color-dark-blue);
+
+}
 .section.featured:last-of-type {
   background-color: var(--color-dark-blue);
   color: var(--color-light-gray);
@@ -158,8 +190,6 @@ export default {
   border-radius: 8px;
   color: var(--color-dark-blue);
 }
-
-
 
 .section span {
   color: aqua;
