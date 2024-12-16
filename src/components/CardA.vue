@@ -19,8 +19,8 @@
   
   <style scoped>
   .card {
-    background-color: #f8f9fa;
     border: 1px solid #ddd;
+    color: var(--color-dark-blue);
     border-radius: 8px;
     padding: 20px;
     text-align: center;

@@ -70,20 +70,20 @@ export default {
 .category-filter {
   display: flex;
   gap: 1rem;
-  background-color: #1f1f1f;
+  background-color: var(--color-dark-blue);
+  min-height: 80vh;
+  border-top: 1px solid white;
 }
 
 .left-panel {
-  --main-color: #f7e479;
-  --main-color-opacity: #f7e4791c;
-  width: 30%;
-  background-color: #212121;
-  padding: 10px;
-  border-right: 1px solid #ccc;
+  width: 20%;
+  background-color: var(--color-dark-blue);
+  padding: 2rem;
+  border-right: 1px solid #171f68;
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-left: 0.5rem;
+  padding-left: 5rem;
 }
 
 .left-panel ul {
@@ -93,31 +93,24 @@ export default {
 }
 
 .left-panel li {
-  margin: 2rem;
+  font-size: 1.25rem;
+  margin: 0.5rem;
   padding: 1rem 2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 30px;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25),
-    -15px -15px 30px rgb(60, 60, 60);
-  font-size: 18px;
-  font-weight: bold;
-  font-weight: bolder;
-  background: linear-gradient(45deg, #000000 4%, #fff, #000);
-  background-clip: text;
-  color: transparent;
 
 }
 
 .left-panel li.active {
-  background-color: #d4d4d4;
-  color: white;
+  color: var(--color-secondary-yellow);
+  font-weight: 700;
+  transition: all 0.4s;
 }
 
 .right-panel {
-  width: 70%;
-  padding: 10px;
+  width: 80%;
+  padding: 3rem;
 }
 .right-panel::before,
 .right-panel::after {
@@ -125,7 +118,6 @@ export default {
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(255, 0, 150, 0.5), transparent 70%);
   border-radius: 50%;
   filter: blur(50px);
   z-index: 0; 
@@ -139,7 +131,7 @@ export default {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-dark-blue);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
